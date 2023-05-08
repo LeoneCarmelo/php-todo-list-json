@@ -27,7 +27,7 @@ include 'script.php';
             </ul>
             <div class="input-group mb-3 w-50 mx-auto my-3">
                 <input type="text" class="form-control" placeholder="Inserisci elemento..."
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                    aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTask">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Inserisci</button>
             </div>
 
