@@ -4,26 +4,26 @@ createApp({
   data() {
     return {
       message: 'Todo List',
-      newTask:'',
-      tasks: null,
-      api_url: 'getTasks.php'
+      newTask:'',//Data to send to the API
+      tasks: null,//This property will receive all the data from the API Get and from the API Post
+      api_url: 'getTasks.php'//Url of the API Get
     }
   },
   methods: {
-    addTask() {
+    addTask() { //To add a new task we make a post call to the API Post 
         console.log('add');
         const data = {
-            newTask: this.newTask
+            newTask: this.newTask//Data to send to the API Post
         }
         axios.post(
-            'postTasks.php',
+            'postTasks.php',//API Post url
              data,
               {
                 headers: {'Content-Type': 'multipart/form-data'}
               })
               .then(response => {
                 console.log(response)
-                this.tasks = response.data
+                this.tasks = response.data //Save the data received from API Post
               })
               .catch(error => {
                 console.error(error.message)
@@ -31,11 +31,12 @@ createApp({
     }
   },
   mounted(){
+    //Call the API Get
     axios
     .get(this.api_url)
     .then(response => {
        console.log(response)
-       this.tasks = response.data 
+       this.tasks = response.data //Save the data received from API Get
     })
     .catch(error => {
         console.error(error.message)
