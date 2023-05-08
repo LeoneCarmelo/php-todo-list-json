@@ -1,1 +1,34 @@
-["C++","C","HTML","CSS","Responsive Design","Javascript","PHP","Laravel"]
+[
+    {
+        "language": "C++",
+        "done": false
+    },
+    {
+        "language": "C",
+        "done":false
+    },
+    {
+        "language": "HTML",
+        "done":false
+    },
+    {
+        "language": "CSS",
+        "done":false
+    },
+    {
+        "language": "Responsive Design",
+        "done":false
+    },
+    {
+        "language": "Javascript",
+        "done":false
+    },
+    {
+        "language": "PHP",
+        "done":false
+    },
+    {
+        "language": "Laravel",
+        "done":false
+    }
+]
