@@ -20,22 +20,22 @@ include 'script.php';
         <div class="container">
             <h1 class="text-center">{{ message }}</h1>
             <ul class="list-group w-50 mx-auto">
-                <li class="list-group-item d-flex justify-content-between">
-                    <span>An item</span>
+                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">
+                    <span >{{task}}</span>
                     <i class="fa-solid fa-trash mt-1" style="color: #ff0000;"></i>
                 </li>
             </ul>
             <div class="input-group mb-3 w-50 mx-auto my-3">
                 <input type="text" class="form-control" placeholder="Inserisci elemento..."
                     aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTask">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Inserisci</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Inserisci</button>
             </div>
 
         </div>
     </div>
 
 
-
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
 </body>
