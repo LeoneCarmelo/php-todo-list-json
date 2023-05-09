@@ -16,7 +16,7 @@ if(isset($_POST['newTask'])) {
 
     //convert the string to an associative array
     $tasksArray = json_decode($tasks_string, true);
-    var_dump($taskArray);
+    //var_dump($taskArray);
     //push the task in the array
     array_unshift($tasksArray, $task);
 

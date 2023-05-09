@@ -1,4 +1,3 @@
-
 const { createApp } = Vue
 createApp({
   data() {
@@ -29,9 +28,11 @@ createApp({
         .catch(error => {
           console.error(error.message)
         })
+        this.newTask = ''
     },
-    cutTask(task) { 
+    cutTask(task, index) { 
       task.done = !task.done
+      console.log(task, index)
     }
   },
   mounted() {

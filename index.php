@@ -21,7 +21,7 @@ include 'script.php';
             <h1 class="text-center">{{ message }}</h1>
             <ul class="list-group w-50 mx-auto">
                 <li class="list-group-item d-flex justify-content-between"
-                     v-for="(task, index) in tasks" @click="cutTask(task)">
+                     v-for="(task, index) in tasks" @click="cutTask(task, index)">
                     <span :class="task.done ? 'lineThrough' : ''">{{task.language}}</span>
                     <i class="fa-solid fa-trash mt-1" style="color: #ff0000;"></i>
                 </li>
