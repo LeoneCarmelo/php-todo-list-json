@@ -22,7 +22,7 @@ include 'script.php';
             <ul class="list-group w-50 mx-auto">
                 <li class="list-group-item d-flex justify-content-between"
                      v-for="(task, index) in tasks">
-                    <span :class="task.done ? 'lineThrough' : ''">{{task.language}}</span>
+                    <span :class="task.done ? 'lineThrough' : ''" @click="cutTask(index)">{{task.language}}</span>
                     <i class="fa-solid fa-trash mt-1" style="color: #ff0000;" @click="removeTask(index)"></i>
                 </li>
             </ul>

@@ -41,12 +41,30 @@ createApp({
           headers: { 'Content-Type': 'multipart/form-data' }
         }
       )
-      .then(response => {
-        this.tasks = response.data
-      })
-      .catch(error => {
-        console.error(error.message)
-      })
+        .then(response => {
+          this.tasks = response.data
+        })
+        .catch(error => {
+          console.error(error.message)
+        })
+    },
+    cutTask(index) {
+      const data = {
+        index: index
+      }
+      axios.post(
+        'postCutTask.php',
+        data,
+        {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        }
+      )
+        .then(response => {
+          this.tasks = response.data
+        })
+        .catch(error => {
+          console.error(error.message)
+        })
     }
   },
   mounted() {

@@ -8,9 +8,9 @@ if(isset($_POST['index'])) {
 
     //convert the string to an associative array
     $tasksArray = json_decode($tasks_string, true);
-    //var_dump($taskArray);
-    //remove the task in the array
-    array_splice($tasksArray, $index, 1);
+    //var_dump($tasksArray[0]["done"]);
+    //Change the done property
+    $tasksArray[$index]["done"] = !$tasksArray[$index]["done"];
 
     //convert the array in json string
     $newTasksJsonString = json_encode($tasksArray);
