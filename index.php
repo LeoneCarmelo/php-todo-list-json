@@ -30,7 +30,7 @@ include 'script.php';
                 <input type="text" class="form-control" placeholder="Inserisci elemento..."
                     aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTask">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                 @click="addTask">Inserisci</button>
+                 @click="addTask" @keyup.enter="addTask">Inserisci</button>
             </div>
 
         </div>
