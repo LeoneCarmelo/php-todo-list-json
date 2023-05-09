@@ -28,11 +28,25 @@ createApp({
         .catch(error => {
           console.error(error.message)
         })
-        this.newTask = ''
+      this.newTask = ''
     },
-    cutTask(task, index) { 
-      task.done = !task.done
-      console.log(task, index)
+    removeTask(index) {
+      const data = {
+        index: index
+      }
+      axios.post(
+        'postRemoveTask.php',
+        data,
+        {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        }
+      )
+      .then(response => {
+        this.tasks = response.data
+      })
+      .catch(error => {
+        console.error(error.message)
+      })
     }
   },
   mounted() {
