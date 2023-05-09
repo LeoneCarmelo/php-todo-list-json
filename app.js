@@ -6,7 +6,7 @@ createApp({
       message: 'Todo List',
       newTask: '',//Data to send to the API
       tasks: null,//This property will receive all the data from the API Get and from the API Post
-      api_url: 'getTasks.php'//Url of the API Get
+      api_url: 'API/GET/getTasks.php'//Url of the API Get
     }
   },
   methods: {
@@ -16,7 +16,7 @@ createApp({
         newTask: this.newTask,//Data to send to the API Post
       }
       axios.post(
-        'postTasks.php',//API Post url
+        'API/POST/postTasks.php',//API Post url
         data,
         {
           headers: { 'Content-Type': 'multipart/form-data' }
@@ -35,7 +35,7 @@ createApp({
         index: index
       }
       axios.post(
-        'postRemoveTask.php',
+        'API/POST/postRemoveTask.php',
         data,
         {
           headers: { 'Content-Type': 'multipart/form-data' }
@@ -53,7 +53,7 @@ createApp({
         index: index
       }
       axios.post(
-        'postCutTask.php',
+        'API/POST/postCutTask.php',
         data,
         {
           headers: { 'Content-Type': 'multipart/form-data' }

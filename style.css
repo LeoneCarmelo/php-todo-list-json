@@ -1,7 +1,62 @@
+:root {
+    --body: #001632;
+    --text: goldenrod;
+    --title: #6c757d;
+    --thrash: red;
+}
+
+body {
+    background-color: var(--body);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    color: var(--title);
+}
+
 li, i {
     cursor:pointer;
 }
 
+.trash_container {
+    right:20px;
+    top:16px;
+}
+
+.cover {
+    top:-5px;
+    right:-2px;
+    width:16px;
+    height:2px;
+    background-color: var(--thrash);
+}
+
+.bucket {
+    width:12px;
+    height:14px;
+    background: var(--thrash);
+}
+
 .lineThrough {
     text-decoration: line-through;
+}
+
+.btn {
+    background: var(--body);
+    border-color: var(--text);
+    color: var(--text);
+}
+
+.btn:hover {
+    color:var(--body);
+    background-color: var(--text);
+}
+
+.trash_container:hover .cover {
+    top:-9px;
+}
+
+.trash_container:active .cover {
+    top:-2px;
 }

@@ -7,7 +7,7 @@ if this file receive a call from the app.js then we put the data inside
 the json file and saved in a variable
  */
 //get data from json file
-$tasksJsonString = file_get_contents('tasks.json');
+$tasksJsonString = file_get_contents('../tasks.json');
 
 
 //add header appplication/json
