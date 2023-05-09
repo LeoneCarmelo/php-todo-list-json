@@ -6,14 +6,17 @@ if this file receive a call from the app.js  then we do(--see-below--)
 #var_dump($_POST);
 // if the newTask property has been set then we save it in a variable
 if(isset($_POST['newTask'])) {
-    $task = $_POST['newTask'];
+    $task = [
+       "language" => $_POST['newTask'],
+        "done" => false 
+    ];
 
     //the we get the data from the json
     $tasks_string = file_get_contents('tasks.json');
 
     //convert the string to an associative array
     $tasksArray = json_decode($tasks_string, true);
-
+    var_dump($taskArray);
     //push the task in the array
     array_unshift($tasksArray, $task);
 
@@ -29,3 +32,4 @@ if(isset($_POST['newTask'])) {
     //echo json
     echo $newTasksJsonString;
 }
+
