@@ -15,6 +15,11 @@ h1 {
     color: var(--title);
 }
 
+ul {
+    height:200px;
+    overflow-y: scroll;
+}
+
 li, i {
     cursor:pointer;
 }
@@ -22,6 +27,7 @@ li, i {
 .trash_container {
     right:20px;
     top:16px;
+    padding:2px;
 }
 
 .cover {
